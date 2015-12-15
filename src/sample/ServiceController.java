@@ -104,8 +104,8 @@ public class ServiceController extends BaseController  implements Initializable 
         if (tab.getText().equals("Flights")) {
             int ind = listFlights.getSelectionModel().getSelectedIndex();
             if(ind!=-1) {
-                sample.List.createFire(new RemoveEventFlight(this, ind));
                 Controller.flightService.getAllFlights().remove(ind);
+                sample.List.createFire(new RemoveEventFlight(this, ind));
             }
         } else {
             int ind = listRoutes.getSelectionModel().getSelectedIndex();
